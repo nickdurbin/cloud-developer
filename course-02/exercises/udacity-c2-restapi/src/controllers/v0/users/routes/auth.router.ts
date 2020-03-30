@@ -2,7 +2,7 @@ import { Router, Request, Response } from 'express';
 
 import { User } from '../models/User';
 
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 import * as jwt from 'jsonwebtoken';
 import { NextFunction } from 'connect';
 
@@ -10,14 +10,17 @@ import * as EmailValidator from 'email-validator';
 
 const router: Router = Router();
 
+// @ts-ignore
 async function generatePassword(plainTextPassword: string): Promise<string> {
     //@TODO Use Bcrypt to Generated Salted Hashed Passwords
 }
 
+// @ts-ignore
 async function comparePasswords(plainTextPassword: string, hash: string): Promise<boolean> {
     //@TODO Use Bcrypt to Compare your password to your Salted Hashed Password
 }
 
+// @ts-ignore
 function generateJWT(user: User): string {
     //@TODO Use jwt to create a new JWT Payload containing
 }
